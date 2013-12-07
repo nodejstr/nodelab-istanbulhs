@@ -13,8 +13,7 @@ module.exports = function (app, config) {
     app.use(express.static(config.root + '/public'))
     app.use(express.logger('dev'))
     app.set('views', config.root + '/app/view')
-    app.set('view engine', 'jade')
-
+    app.set('view engine', 'jade', {layout :true})
     app.configure(function () {
         app.use(express.cookieParser())
         app.use(express.urlencoded())
