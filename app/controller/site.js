@@ -1,5 +1,5 @@
 exports.index = function (req, res) {
-    res.json({result: 1, status: 'Index'});
+    res.render('site/index',{youAreUsingJade : true})
 }
 
 exports.jsontest =function (req, res) {
